@@ -1,11 +1,12 @@
 version: "3"
 
-##ref: https://github.com/shadowsocks/shadowsocks-libev/blob/master/docker/alpine/README.md 
-shadowsocks:
-  image: shadowsocks/shadowsocks-libev
-  ports:
-    - "8388:8388"
-  environment:
-    - METHOD=aes-256-gcm
-    - PASSWORD=
-  restart: always
+services: 
+  ##ref: https://github.com/shadowsocks/shadowsocks-libev/blob/master/docker/alpine/README.md 
+  shadowsocks:
+    image: shadowsocks/shadowsocks-libev
+    ports:
+      - "8388:8388"
+    environment:
+      - METHOD=aes-256-gcm
+      - PASSWORD=
+    restart: always
